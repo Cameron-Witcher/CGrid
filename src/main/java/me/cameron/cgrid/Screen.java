@@ -30,7 +30,7 @@ public class Screen extends JPanel implements ActionListener {
 	Timer timer;
 	Random random;
 
-	private double gridSize = 50;
+	private double gridSize = 5;
 	int agsx;
 	int agsy;
 
@@ -76,9 +76,9 @@ public class Screen extends JPanel implements ActionListener {
 		super.paintComponent(g);
 //		g.setColor(Color.BLACK);
 //		g.fillRect(0, 0, getWidth(), getHeight());
-//		setGridSize(100 );
-		agsx = (int) Math.floor(Main.getWindow().getWidth() / getGridSize()) - 1;
-		agsy = (int) Math.floor(Main.getWindow().getHeight() / getGridSize()) - 1;
+		setGridSize(100);
+		agsx = (int) Math.ceil(Main.getWindow().getWidth() / getGridSize()) ;
+		agsy = (int) Math.ceil(Main.getWindow().getHeight() / getGridSize()) - 1;
 		for (int i = 0; !(i >= Main.getWindow().getWidth() / agsx); i++) {
 			for (int j = 0; !(j >= Main.getWindow().getHeight() / agsy); j++) {
 				g.setColor(generateColor(i + j, 0.1));
