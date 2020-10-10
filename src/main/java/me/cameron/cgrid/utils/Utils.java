@@ -13,8 +13,10 @@ public class Utils {
 		return Main.getWindow().getScreen().getGridInfo().get(new Point(x,y));
 	}
 
-	public static void changeCell(Point point, CellColor color, boolean b) {
-		Main.getWindow().getScreen().getChanges().put(b, new Cell(point,color));
+	public static Cell changeCell(Point point, CellColor color, boolean b) {
+		Cell c = new Cell(point,color);
+		Main.getWindow().getScreen().getChanges().put(c, b);
+		return c;
 	}
 
 	public static int getGridSize() {
