@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-
 import me.cameron.cgrid.Main;
 
 public class Cell {
@@ -78,17 +77,6 @@ public class Cell {
 						}
 					}
 				}
-//				if (color.equals(CellColor.BLUE)) {
-//					if (!Utils.getCell(p.x, p.y).getColor().equals(CellColor.BLACK)) {
-//						if (d.isAvalible(point)) {
-//							if (new Random().nextBoolean()) {
-//								changedCells.add(Utils.changeCell(p, color, true));
-//
-//								break;
-//							}
-//						}
-//					}
-//				}
 			}
 			if (color.equals(CellColor.BLUE)) {
 				Direction d = allowedDirections[new Random().nextInt(allowedDirections.length)];
@@ -126,105 +114,6 @@ public class Cell {
 				break;
 
 			}
-
-//			switch (color) {
-////			case BLUE:
-////				if (!Utils.getCell(point.x - 1, point.y - 1).getColor().equals(CellColor.BLACK) && !Utils.getCell(point.x - 1, point.y - 1).getColor().equals(CellColor.GREEN)) {
-////					if (point.x - 1 >= 0 && point.y - 1 >= 0)
-////						changedCells.add(Utils.changeCell(new Point(point.x - 1, point.y - 1), color, true));
-////				}
-////				if (!Utils.getCell(point.x - 1, point.y + 1).getColor().equals(CellColor.BLACK) && !Utils.getCell(point.x - 1, point.y + 1).getColor().equals(CellColor.GREEN)) {
-////					if (point.x - 1 >= 0 && point.y + 1 <= Utils.getGridSize())
-////						changedCells.add(Utils.changeCell(new Point(point.x - 1, point.y + 1), color, true));
-////				}
-//////				if (Utils.getCell(point.x + 1, point.y + 1).getColor().equals(CellColor.REMOVE)) {
-//////					if (point.x + 1 <= Utils.getGridSize() && point.y + 1 <= Utils.getGridSize())
-//////						changedCells.add(Utils.changeCell(new Point(point.x + 1, point.y + 1), color, true));
-//////				}
-//////				if (Utils.getCell(point.x + 1, point.y - 1).getColor().equals(CellColor.REMOVE)) {
-//////					if (point.x + 1 <= Utils.getGridSize() && point.y - 1 >= 0)
-//////						changedCells.add(Utils.changeCell(new Point(point.x + 1, point.y - 1), color, true));
-//////				}
-////				if (lifetime > 2)
-////					remove();
-////				break;
-//			case GREEN:
-////				if (Utils.getCell(point.x + 1, point.y).getColor().equals(CellColor.RED)) {
-////					if (point.x + 1 <= Utils.getGridSize())
-////						changedCells.add(Utils.changeCell(new Point(point.x + 1, point.y), color, true));
-////				}
-////				if (Utils.getCell(point.x, point.y + 1).getColor().equals(CellColor.RED)) {
-////					if (point.y + 1 <= Utils.getGridSize())
-////						changedCells.add(Utils.changeCell(new Point(point.x, point.y + 1), color, true));
-////				}
-////				if (Utils.getCell(point.x - 1, point.y).getColor().equals(CellColor.RED)) {
-////					if (point.x - 1 >= 0)
-////						changedCells.add(Utils.changeCell(new Point(point.x - 1, point.y), color, true));
-////				}
-////				if (Utils.getCell(point.x, point.y - 1).getColor().equals(CellColor.RED)) {
-////					if (point.y - 1 >= 0)
-////						changedCells.add(Utils.changeCell(new Point(point.x, point.y - 1), color, true));
-////				}
-////
-////				if (Utils.getCell(point.x - 1, point.y - 1).getColor().equals(CellColor.RED)) {
-////					if (point.x - 1 >= 0 && point.y - 1 >= 0)
-////						changedCells.add(Utils.changeCell(new Point(point.x - 1, point.y - 1), color, true));
-////				}
-////				if (Utils.getCell(point.x - 1, point.y + 1).getColor().equals(CellColor.RED)) {
-////					if (point.x - 1 >= 0 && point.y + 1 <= Utils.getGridSize())
-////						changedCells.add(Utils.changeCell(new Point(point.x - 1, point.y + 1), color, true));
-////				}
-////				if (Utils.getCell(point.x + 1, point.y + 1).getColor().equals(CellColor.RED)) {
-////					if (point.x + 1 <= Utils.getGridSize() && point.y + 1 <= Utils.getGridSize())
-////						changedCells.add(Utils.changeCell(new Point(point.x + 1, point.y + 1), color, true));
-////				}
-////				if (Utils.getCell(point.x + 1, point.y - 1).getColor().equals(CellColor.RED)) {
-////					if (point.x + 1 <= Utils.getGridSize() && point.y - 1 >= 0)
-////						changedCells.add(Utils.changeCell(new Point(point.x + 1, point.y - 1), color, true));
-////				}
-////
-////				changedCells.clear();
-////
-////				if (lifetime > 2)
-////					remove();
-////				break;
-//			case RED:
-//
-//				if (Utils.getCell(point.x + 1, point.y).getColor().equals(CellColor.REMOVE)) {
-//					if (point.x + 1 <= Utils.getGridSize())
-//						changedCells.add(Utils.changeCell(new Point(point.x + 1, point.y), color, true));
-//
-//				}
-//				if (Utils.getCell(point.x, point.y + 1).getColor().equals(CellColor.REMOVE)) {
-//					if (point.y + 1 <= Utils.getGridSize()) {
-////						System.out.println("Up");
-//						changedCells.add(Utils.changeCell(new Point(point.x, point.y + 1), color, true));
-//
-//					}
-//				}
-//
-//				if (Utils.getCell(point.x - 1, point.y).getColor().equals(CellColor.REMOVE)) {
-//					if (point.x - 1 >= 0)
-//						changedCells.add(Utils.changeCell(new Point(point.x - 1, point.y), color, true));
-//
-//				}
-//				if (Utils.getCell(point.x, point.y - 1).getColor().equals(CellColor.REMOVE)) {
-//					if (point.y - 1 >= 0) {
-//
-//						changedCells.add(Utils.changeCell(new Point(point.x, point.y - 1), color, true));
-//					}
-//
-//				}
-//				if (changedCells.size() > 0) {
-//
-//				} else {
-//					Utils.changeCell(point, CellColor.BLACK, true);
-//				}
-//
-//				break;
-//			default:
-//				break;
-//			}
 
 			lifetime = lifetime + 1;
 		}

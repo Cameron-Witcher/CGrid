@@ -26,7 +26,7 @@ public class Screen extends JPanel implements ActionListener {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	int DELAY = 1;
+	int DELAY = 50;
 	Timer timer;
 	Random random;
 
